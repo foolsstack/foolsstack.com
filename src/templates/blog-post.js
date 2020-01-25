@@ -189,14 +189,14 @@ class BlogPostTemplate extends React.Component {
           </article>
         </main>
         <aside>
-          <div
+          {/* <div
             style={{
               margin: '90px 0 40px 0',
               fontFamily: systemFont,
             }}
           >
             <Signup cta={post.frontmatter.cta} />
-          </div>
+          </div> */}
           <h3
             style={{
               fontFamily: 'Montserrat, sans-serif',
