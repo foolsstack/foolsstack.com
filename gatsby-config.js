@@ -1,12 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Overreacted',
-    author: 'Dan Abramov',
-    description: 'Personal blog by Dan Abramov. I explain with words and code.',
-    siteUrl: 'https://overreacted.io',
-    social: {
-      twitter: '@dan_abramov',
-    },
+    title: 'Foolsstack',
+    author: 'Asaf Yehezkel',
+    description: 'Personal blog by Asaf Yehezkel.',
+    siteUrl: 'https://foolsstack.com',
   },
   pathPrefix: '/',
   plugins: [
@@ -80,12 +77,11 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at overreacted.io. You can read it online by <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at foolsstack.com. You can read it online by <a href="${siteUrl +
                   edge.node.fields.slug}">clicking here</a>.)</div>
               `;
 
                 let html = edge.node.html;
-                // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
@@ -126,7 +122,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Dan Abramov's Overreacted Blog RSS Feed",
+            title: "Asaf Yehezkel's Foolsstack Blog RSS Feed",
           },
         ],
       },
@@ -134,7 +130,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-ebook`,
       options: {
-        filename: 'overreacted-ebook.epub',
+        filename: 'foolsstack-ebook.epub',
         query: `
           {
             site {
@@ -165,8 +161,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Overreacted`,
-        short_name: `Overreacted`,
+        name: `Foolsstack`,
+        short_name: `Foolsstack`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,

@@ -3,7 +3,7 @@ import React from 'react';
 import './Signup.css';
 
 const REACT_COMPONENTS_FORM_ID = '1181861';
-const OVERREACTED_FORM_ID = '812047';
+const FOOLSSTACK_FORM_ID = '812047';
 
 class Signup extends React.Component {
   render() {
@@ -21,7 +21,7 @@ class Signup extends React.Component {
         break;
       default:
         form = {
-          id: OVERREACTED_FORM_ID,
+          id: FOOLSSTACK_FORM_ID,
           title: 'Subscribe to the Newsletter',
           subTitle: 'Subscribe to get my latest content by email.',
           buttonText: 'Subscribe',

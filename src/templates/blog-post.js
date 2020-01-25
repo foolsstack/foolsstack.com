@@ -17,8 +17,8 @@ import {
   replaceAnchorLinksByLanguage,
 } from '../utils/i18n';
 
-const GITHUB_USERNAME = 'gaearon';
-const GITHUB_REPO_NAME = 'overreacted.io';
+const GITHUB_USERNAME = 'foolsstack';
+const GITHUB_REPO_NAME = 'foolsstack.com';
 const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
@@ -136,9 +136,9 @@ class BlogPostTemplate extends React.Component {
       1,
       enSlug.length - 1
     )}/index${lang === 'en' ? '' : '.' + lang}.md`;
-    const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://overreacted.io${enSlug}`
-    )}`;
+    // const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
+    //   `https://foolsstack.com${enSlug}`
+    // )}`;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -175,7 +175,7 @@ class BlogPostTemplate extends React.Component {
               )}
             </header>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <footer>
+            {/* <footer>
               <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
                   Discuss on Twitter
@@ -185,7 +185,7 @@ class BlogPostTemplate extends React.Component {
                   Edit on GitHub
                 </a>
               </p>
-            </footer>
+            </footer> */}
           </article>
         </main>
         <aside>
@@ -211,7 +211,7 @@ class BlogPostTemplate extends React.Component {
               }}
               to={'/'}
             >
-              Overreacted
+              Foolsstack
             </Link>
           </h3>
           <Bio />

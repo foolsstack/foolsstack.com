@@ -24,11 +24,11 @@ class BlogIndexTemplate extends React.Component {
           <Bio />
         </aside>
         <main>
-          {langKey !== 'en' && langKey !== 'ru' && (
+          {/* {langKey !== 'en' && langKey !== 'ru' && (
             <Panel>
               These articles have been{' '}
               <a
-                href="https://github.com/gaearon/overreacted.io#contributing-translations"
+                href="https://github.com/foolsstack/foolstack.com#contributing-translations"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -36,7 +36,7 @@ class BlogIndexTemplate extends React.Component {
               </a>
               .
             </Panel>
-          )}
+          )} */}
 
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;

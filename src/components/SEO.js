@@ -11,9 +11,6 @@ const query = graphql`
         author
         description
         siteUrl
-        social {
-          twitter
-        }
       }
     }
   }
@@ -37,7 +34,7 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                   title,
                 }
               : {
-                  title: `${siteMetadata.title} — A blog by Dan Abramov`,
+                  title: `${siteMetadata.title}`,
                 })}
             meta={[
               {
@@ -54,22 +51,6 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
               },
               {
                 property: 'og:description',
-                content: metaDescription,
-              },
-              {
-                name: 'twitter:card',
-                content: 'summary',
-              },
-              {
-                name: 'twitter:creator',
-                content: siteMetadata.social.twitter,
-              },
-              {
-                name: 'twitter:title',
-                content: title || siteMetadata.title,
-              },
-              {
-                name: 'twitter:description',
                 content: metaDescription,
               },
             ]
