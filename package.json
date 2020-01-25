@@ -1,7 +1,9 @@
 {
   "name": "foolsstack",
   "private": true,
-  "engines": {"node": "12.x"},
+  "engines": {
+    "node": "12.x"
+  },
   "description": "Foolsstack",
   "version": "1.0.0",
   "author": "Asaf Yehezkel <foolsstack@gmail.com>",
@@ -30,6 +32,7 @@
     "husky": "^1.3.1",
     "lint-staged": "^8.1.0",
     "lodash": "^4.17.11",
+    "now": "^16.7.3",
     "prismjs": "^1.15.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
@@ -55,7 +58,8 @@
     "start": "npm run develop",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "now-build": "gatsby build",
-    "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) foolsstack.com",
+    "deploy1": "yarn build && cp now.json public/ && cd public && now alias $(now) foolsstack.com",
+    "deploy": "yarn build && now --prod",
     "dry": "yarn build && cp now.json public/ && cd public && now",
     "js-to-jsx": "node src/utils/js-to-jsx"
   },
